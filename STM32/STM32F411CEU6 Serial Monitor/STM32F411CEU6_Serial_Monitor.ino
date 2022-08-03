@@ -6,10 +6,10 @@
  */
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(115200);  //memulai serial dengan baudrate 115200
 }
 
 void loop() {
-  Serial.println("Hello World from DIYSTRON");
-  delay(1000);
+  Serial.println("Hello World from DIYSTRON");  //menulis kata ke serial monitor
+  delay(1000);  //delay 1 detik
 }
