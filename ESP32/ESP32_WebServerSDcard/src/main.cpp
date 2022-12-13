@@ -1,3 +1,6 @@
+// Programming ESP32 Web Server Hosting from SDcard
+// https://diystron.blogspot.com/2022/12/programming-esp32-web-server-hosting.html
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <AsyncTCP.h>
