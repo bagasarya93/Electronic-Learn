@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ESP32 WebServer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"
+        ></script>
+        
+        <!--CSS-->
+        <link rel="stylesheet" href="style.css" />
+      </head>
+<body>
+        <h1>Web Server Control</h1>
+<!--Display current state, and ON/OFF buttons for GPIO 26-->
+        <p>LED green - OFF </p>
+        <!--if (redstate == "off") {-->
+        <p><a href="greenONredON.html"><button class="button">ON</button></a></p>
+
+<!--Display current state, and ON/OFF buttons for GPIO 27-->
+        <p>LED red - ON </p>
+        <!--if (redstate == "off") {-->
+        <p><a href="index.html"><button class="button2">OFF</button></a></p>
+
+<!--Display Temperature Gauge-->
+
+        <h2 class="tittle-Temp">Measure Temperature</h2>
+        <p><a href="/red/off"><button class="button button2\">TEMPERATURE DISPLAY</button></a></p>
+
+        <!--<canvas id="gauge-temperature"></canvas>-->
+        <canvas id=
+        "gaugetemperature"></canvas>
+
+      <script >
+        var gaugeTemp = new LinearGauge({
+        renderTo: 'gaugetemperature',
+        width: 160,
+        height: 600,
+        borderRadius: 20,
+        borders: 0,
+        barStrokeWidth: 20,
+        minorTicks: 10,
+        majorTicks: [0,10,20,30,40,50,60,70,80,90,100],
+        value: 22.3,
+        units: "Celcius",}).draw();
+      </script>
+</body>
+</html>
+<!-- make main.cpp program-->

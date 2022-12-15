@@ -1,0 +1,26 @@
+
+    font-family: Helvetica;
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    background-color:#ffffff;
+}
+
+button { 
+    background-color: #195B6A;
+    border: none;
+    color: white;
+    padding: 16px 40px;
+}
+
+.button2 {
+    background-color: #77878A;
+}
+
+.tittle-Temp{
+    font-style:italic;
+}
+
+.suhu{
+    font-weight: bold;
+}

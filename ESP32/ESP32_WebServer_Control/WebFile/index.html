@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ESP32 WebServer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"
+        ></script>
+        
+        <!--CSS-->
+        <link rel="stylesheet" href="style.css" />
+        <style>
+             html {
+                font-family: Helvetica;
+                display: inline-block;
+                margin: 0px auto;
+                text-align: center;
+                background-color:#ffffff;
+             }   
+             button{
+                background-color: #195B6A;
+                border: none;
+                color: white;
+                padding: 16px 40px;
+             }
+             .button2 {
+                background-color: #77878A;
+             }
+             .tittle-Temp{
+                font-style:italic;
+            }
+            .suhu{
+                font-weight: bold;}
+        </style>
+      </head>
+<body>
+        <h1>Web Server Control</h1>
+<!--Display current state, and ON/OFF buttons for GPIO 26-->
+        <p>LED green - OFF</p>
+        <!--if (redstate == "off") {-->
+        <p><a href="greenONredOFF.html"><button class="button">ON</button></a></p>
+
+
+<!--Display current state, and ON/OFF buttons for GPIO 27-->
+        <p>LED red - OFF</p>
+        <!--if (redstate == "off") {-->
+        <p><a href="redONgreenOFF.html"><button class="button">ON</button></a></p>
+
+<!--Display Temperature Gauge-->
+
+        <h2 class="tittle-Temp">Measure Temperature</h2>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhFjL98mtVQ72T7sDMrj7OHWzreA7h7PZGuA&usqp=CAU\" >
+        <p class="suhu"> 35 derajat</p>
+
+        <canvas id="temperaturegauge"></canvas>
+        
+        <script>
+        var gauge = new LinearGauge({
+        renderTo: 'gauge-id',
+        colorNumbers: 'red',
+        width: 100,
+        height: 300
+        }).draw();
+
+        </script>
+
+
+</body>
+</html>
+
